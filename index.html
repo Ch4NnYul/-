@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* 이서윤체 폰트 적용을 위한 코드 */
+      @font-face {
+        font-family: "LeeSeoyun";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      /* body태그 자체에 css 요소 부여 */
+        body {
+	       font-family: "LeeSeoyun";
+	       margin: 0;
+	       display: flex;
+	       justify-content: center;
+	       background-image: url("./background.png");
+        }
+
+        .container{
+            width: 390px;
+            background-color: #ff9d73;
+            height: 100%;
+        }
+
+        .photos{
+            margin-top: 30px;
+        }
+
+        .photo-frame{
+            background-color: white;
+            margin: 15px 20px;
+            height: 200px;
+
+            background-size: cover;
+        }
+
+        .footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .f-title{
+            font-size: 25px;
+            font-weight: 900;
+            color: white;
+        }
+
+        #image1{
+            background-image: url('./KakaoTalk_20230326_195831867.jpg');
+        }
+
+        #image2{
+            background-image: url('./KakaoTalk_20230326_202122422.jpg');
+        }
+
+        #image3{
+            background-image: url('./KakaoTalk_20230326_195831867_02.jpg');
+        }
+
+        #image4{
+            background-image: url('./KakaoTalk_20230326_195831867_03.jpg');
+        }
+
+        .photo_description{
+            color: white;
+            background-color: black;
+
+            width: fit-content;
+            padding: 0 20px;
+            margin-bottom: 10px;
+        }
+
+        .showText{
+            opacity: 1;
+        }
+
+        .hideText{
+            opacity: 1;
+            transition: opacity 0.5s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="photos">
+            <div id="image1" class="photo-frame"
+            
+            onmouseover="showText(1)"
+	        onmouseout="hideText(1)"
+	        onclick="alertText(1)">
+                <span id="desc1" class="photo_description">
+                    잠자는태평
+                </span>
+            </div>
+            <div id="image2" class="photo-frame">
+                <span id="desc2" class="photo_description">
+                    바보태평
+                </span>
+            </div>
+            <div id="image3" class="photo-frame">
+                <span id="desc3" class="photo_description">
+                    또자는태평
+                </span>
+            </div>
+            <div id="image4" class="photo-frame">
+                <span id="desc4" class="photo_description">
+                    맨날자는태평
+                </span>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="f-title">Happy Sleeping Time</p>
+            <div>
+                <script>
+                date = new Date().toLocaleDateString();
+                document.write(date);
+                </script>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
